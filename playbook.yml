@@ -1,0 +1,6 @@
+- hosts: megatunkki
+  user: pikariop
+  sudo: yes
+
+  roles:
+    - locales
