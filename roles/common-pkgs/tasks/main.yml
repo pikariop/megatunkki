@@ -1,0 +1,19 @@
+---
+
+- name: Upgrade packages
+  apt: update_cache=yes
+       upgrade=yes
+  tags:
+    - common-pkgs
+    - common-pkgs-upgrade
+
+
+- name: Install
+  apt: pkg={{ item }}
+       state=latest
+       update_cache=yes
+  with_items:
+    - '{{ packages }}'
+  tags:
+    - common-pkgs
+    - common-pkgs-install

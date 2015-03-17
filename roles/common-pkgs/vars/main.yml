@@ -1,0 +1,12 @@
+---
+
+packages:
+- vim
+- nano
+- zsh
+- irssi
+- weechat-curses
+- tmux
+- screen
+- multitail
+- htop
