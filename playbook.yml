@@ -2,6 +2,8 @@
   user: pikariop
   sudo: yes
 
+  vars_files: localvars.yml
+
   roles:
     - locales
     - common-pkgs
