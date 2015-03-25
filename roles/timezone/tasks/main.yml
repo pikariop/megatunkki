@@ -1,0 +1,18 @@
+---
+
+- name: Set timezone
+  copy: content='{{ timezone }}'
+        dest=/etc/timezone
+        owner=root
+        group=root
+        mode=0644
+        backup=yes
+  tags:
+    - timezone
+
+- name: Update timezone
+  command: dpkg-reconfigure --frontend noninteractive tzdata
+  notify: restart cron
+  tags:
+    - timezone
+
