@@ -1,6 +1,7 @@
 ---
 
 packages:
+- build-essential
 - vim
 - nano
 - zsh
@@ -10,3 +11,4 @@ packages:
 - screen
 - multitail
 - htop
+- curl
