@@ -12,3 +12,8 @@ packages:
 - multitail
 - htop
 - curl
+- git
+- oidentd
+
+repositories:
+- 'ppa:nesthib/weechat'

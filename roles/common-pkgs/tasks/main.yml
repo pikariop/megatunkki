@@ -7,6 +7,21 @@
     - common-pkgs
     - common-pkgs-upgrade
 
+- name: Install python-software-properties
+  apt: pkg=python-software-properties
+       state=latest
+  tags:
+    - common-pkgs
+    - common-pkgs-pythonswprops
+
+- name: Add repositories
+  apt_repository: repo={{ item }}
+                  state=present
+  with_items:
+    - '{{ repositories }}'
+  tags:
+    - common-pkgs
+    - common-pkgs-repos
 
 - name: Install
   apt: pkg={{ item }}
