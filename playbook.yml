@@ -1,8 +1,8 @@
 - hosts: megatunkki
-  user: pikariop
   sudo: yes
 
-  vars_files: localvars.yml
+  vars_files:
+    - localvars.yml
 
   roles:
     - locales
